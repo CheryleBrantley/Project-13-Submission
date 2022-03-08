@@ -8,10 +8,10 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-- [Ansible Playbook](/Ansible/pentest)
-- [Filebeat Playbook](/Ansible/filebeat-playbook)
-- [Metricbeat Playbook](/Ansible/metricbeat-playbook)
-- [Elk Playbook](/Ansible/install-elk)
+- [Ansible Playbook](/Ansible/pentest.yml)
+- [Filebeat Playbook](/Ansible/filebeat-playbook.yml)
+- [Metricbeat Playbook](/Ansible/metricbeat-playbook.yml)
+- [Elk Playbook](/Ansible/install-elk.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -28,9 +28,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - What aspect of security do load balancers protect?
-  - ???
+  - Distributed Denial of Service (DDoS) attacks.
 - What is the advantage of a jump box?
-  - ???
+  - 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system monitoring.
 - What does Filebeat watch for?
