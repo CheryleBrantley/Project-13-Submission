@@ -91,6 +91,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![sudo docker ps](https://user-images.githubusercontent.com/93627049/157364894-78bb76e5-ed66-4ecb-b6b4-3d5e5032bc00.PNG)
 
+
 ### Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
@@ -105,8 +106,8 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
-  - Filebeats: 
-  - Metricbeats:
+  - Filebeats: Forwards and centralizes logging data.
+  - Metricbeats: Metric data from target servers.
 
 
 ### Using the Playbook
@@ -114,7 +115,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the Ansible file to '/etc/ansible/'.
+- Copy the Ansible file to `/etc/ansible/`.
 - Update the 'ansible.cfg' file to include remote user name.
 - Run the playbook, and navigate to 'http://ELK-Public-IP/app/kibana' to check that the installation worked as expected.
 
@@ -122,17 +123,17 @@ Answer the following questions to fill in the blanks:
 - Which file is the playbook?
   - filebeat-playbook.yml
 - Where do you copy it?
-  - /etc/ansible/
+  - `/etc/ansible/`
 - Which file do you update to make Ansible run the playbook on a specific machine?
-  - /etc/ansible/hosts/
+  - `/etc/ansible/hosts/`
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-  - Depends on the group.
+  - By using the ansible group. There is a webservers group and an elkserver.
 - Which URL do you navigate to in order to check that the ELK server is running?
   - http://13.64.146.37:5602/app/kibana
 
  _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
  
- | Command                             | Purpose
+ | Command                             | Purpose                        |
  |-------------------------------------|--------------------------------|
  | systemctl status docker             | Docker application status      |
  | sudo docker container ps -a         | Active/Enactive container list |
